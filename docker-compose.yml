@@ -1,17 +1,26 @@
-version: "2.1"
+---
+version: "3.8"
 services:
   plex:
     image: lscr.io/linuxserver/plex:latest
     container_name: plex
     network_mode: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=1001
+      - PGID=1001
       - VERSION=docker
-      - PLEX_CLAIM= #optional
+      - PLEX_CLAIM=##CLAIM-TOKEN##
       - DOCKER_MODS=linuxserver/mods:plex-absolute-hama
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
     volumes:
-      - /path/to/library:/config
-      - /path/to/tvseries:/tv
-      - /path/to/movies:/movies
+      - /home/tizu/plex/appdata/config:/config
+      - /mnt/media/TV Shows:/tv
+      - /mnt/media/Movies:/movies
+      - /mnt/media/Music:/music
     restart: unless-stopped
