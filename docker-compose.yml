@@ -14,7 +14,6 @@ services:
       - PUID=1001
       - PGID=1001
       - VERSION=docker
-      - PLEX_CLAIM=claim-JqKmMibymkhjQMNw2g_w
       - DOCKER_MODS=linuxserver/mods:plex-absolute-hama
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
