@@ -19,7 +19,7 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
     volumes:
-      - /home/tizu/plex/appdata/config:/config
+      - /home/kyle/PlexInDocker/appdata/config:/config
       - /mnt/media/TV Shows:/tv
       - /mnt/media/Movies:/movies
       - /mnt/media/Music:/music
