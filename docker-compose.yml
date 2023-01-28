@@ -20,7 +20,8 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
     volumes:
       - /home/kyle/PlexInDocker/appdata/config:/config
-      - /mnt/media/TV Shows:/tv
-      - /mnt/media/Movies:/movies
-      - /mnt/media/Music:/music
+      - /media/sda1/Movies - Covington - 2019:/movies-sda1-1
+      - /media/sda1/Movies - Louisville - 2020:/movies-sda1-2
+      - /media/sda1/TV Shows:/tv-sda1-1
+      - /media/sda1/Music:/music-sda1-1
     restart: unless-stopped
