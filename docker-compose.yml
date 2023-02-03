@@ -23,4 +23,6 @@ services:
       - /media/sda1/Movies - Louisville - 2020:/movies-sda1-2
       - /media/sda1/TV Shows:/tv-sda1-1
       - /media/sda1/Music:/music-sda1-1
+      - /media/sdb1/Movies:/movies-sdb1-1
+      - /media/sdc1/TV Shows:/tv-sdc1-1
     restart: unless-stopped
